@@ -1,0 +1,366 @@
+{
+  "components": [
+    {
+      "name": "HeroOne",
+      "desc": "A hero component for displaying an app's introduction with a title, description, and two call-to-action buttons.",
+      "details": "The app name, description, and button texts are required to properly display this hero section.",
+      "category": "hero",
+      "preference": 5,
+      "props": [
+        {
+          "name": "appName",
+          "type": "string",
+          "desc": "The name of the app to display in the hero section.",
+          "required": true
+        },
+        {
+          "name": "desc",
+          "type": "string",
+          "desc": "A brief description of the app.",
+          "required": true
+        },
+        {
+          "name": "buttonOneText",
+          "type": "string",
+          "desc": "The text for the primary call-to-action button.",
+          "required": true
+        },
+        {
+          "name": "buttonTwoText",
+          "type": "string",
+          "desc": "The text for the secondary call-to-action button.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "HeroTwo",
+      "desc": "A vibrant hero component for showcasing an app's introduction with a gradient background, bold typography, and two call-to-action buttons.",
+      "details": "The app name, description, and button texts are required to properly display this hero section.",
+      "category": "hero",
+      "preference": 4,
+      "props": [
+        {
+          "name": "appName",
+          "type": "string",
+          "desc": "The name of the app to emphasize in the hero section.",
+          "required": true
+        },
+        {
+          "name": "desc",
+          "type": "string",
+          "desc": "A short description of the app that appears under the headline.",
+          "required": true
+        },
+        {
+          "name": "buttonOneText",
+          "type": "string",
+          "desc": "The text for the primary call-to-action button with a bright background.",
+          "required": true
+        },
+        {
+          "name": "buttonTwoText",
+          "type": "string",
+          "desc": "The text for the secondary call-to-action button with a transparent background and border.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Nav",
+      "desc": "A responsive navigation bar component for an app, featuring a brand name and dynamic links. The navigation is optimized for both desktop and mobile views.",
+      "details": "The app name and links are required to properly render the navigation bar. It includes a hamburger menu for mobile screens.",
+      "category": "navigation",
+      "props": [
+        {
+          "name": "appName",
+          "type": "string",
+          "desc": "The name of the app displayed as the brand in the navigation bar.",
+          "required": true
+        },
+        {
+          "name": "links",
+          "type": "string[]",
+          "desc": "An array of link names to display in the navigation bar.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MediaHero",
+      "desc": "A hero component for media content. It can be used to display images, and videos with a title, subtitle and description.",
+      "details": "Image link is required. If Image is provided then alt should be provided as well.",
+      "category": "hero",
+      "preference": 1,
+      "props": [
+        {
+          "name": "imgURL",
+          "type": "string",
+          "desc": "The URL of the image to display.",
+          "required": false
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "desc": "The alt text for the image.",
+          "required": false
+        },
+        {
+          "name": "parentStyles",
+          "type": "tailwindcss-class-string",
+          "desc": "The styles for the parent container.",
+          "required": false
+        },
+        {
+          "name": "videoURL",
+          "type": "string",
+          "desc": "The URL of the video to display.",
+          "required": false
+        },
+        {
+          "name": "mediaContainerStyles",
+          "type": "tailwindcss-class-string",
+          "desc": "The styles for the media container.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title of the media content.",
+          "required": false
+        },
+        {
+          "name": "subtitle",
+          "type": "string",
+          "desc": "The subtitle of the media content.",
+          "required": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "desc": "The description of the media content.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "GradientHero",
+      "desc": "A hero component with a gradient background. It can be used to display a title, subtitle and description.",
+      "details": "The component has waves in the background. Title and description are required.",
+      "category": "hero",
+      "preference": 2,
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title for the hero.",
+          "required": true
+        },
+        {
+          "name": "desc",
+          "type": "string",
+          "desc": "The description for the hero.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MediaSection",
+      "desc": "A sectioned component which can display images on one side and content on the other. The position of the image can be change by passing the imgPosition prop.",
+      "details": "The component can be used as the hero section as well or for any other section in the page.",
+      "category": "info",
+      "props": [
+        {
+          "name": "imgSrc",
+          "type": "string",
+          "desc": "The URL of the image to display.",
+          "required": true
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "desc": "The alt text for the image.",
+          "required": true
+        },
+        {
+          "name": "imgPosition",
+          "type": "string",
+          "desc": "The position of the image. It can be left or right.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title of the section.",
+          "required": true
+        },
+        {
+          "name": "parentContainerStyles",
+          "type": "tailwindcss-class-string",
+          "desc": "The styles for the parent container.",
+          "required": false
+        },
+        {
+          "name": "content",
+          "type": "string",
+          "desc": "The content to be shown next to the image.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ServiceSection",
+      "desc": "A sectioned component which can display services. It can be used to display services with an title and description.",
+      "details": "The component can be used to display services or features of a product.",
+      "category": "services",
+      "props": [
+        {
+          "name": "services",
+          "type": "array",
+          "desc": "An array of services to display.",
+          "required": true,
+          "arrayObjectType": [
+            {
+              "name": "title",
+              "type": "string",
+              "desc": "The title of the service.",
+              "required": true
+            },
+            {
+              "name": "desc",
+              "type": "string",
+              "desc": "The description of the service.",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title of the section.",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "tailwindcss-class-string",
+          "desc": "The styles for the parent container.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "SliderServiceSection",
+      "desc": "A sectioned component which can display services in a slider. It can be used to display services with an title and description.",
+      "details": "The component can be used to display services or features of a product.",
+      "category": "services",
+      "props": [
+        {
+          "name": "services",
+          "type": "array",
+          "desc": "An array of services to display.",
+          "required": true,
+          "arrayObjectType": [
+            {
+              "name": "title",
+              "type": "string",
+              "desc": "The title of the service.",
+              "required": true
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "desc": "The description of the service.",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title of the section.",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "tailwindcss-class-string",
+          "desc": "The styles for the parent container.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "SliderServiceSectionTwo",
+      "desc": "A sectioned component which can display services in a slider. It can be used to display services with an title, description and an image.",
+      "details": "The component can be used to display services or features of a product.",
+      "category": "services",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title of the section.",
+          "required": true
+        },
+        {
+          "name": "services",
+          "type": "array",
+          "desc": "An array of services to display.",
+          "required": true,
+          "arrayObjectType": [
+            {
+              "name": "serviceName",
+              "type": "string",
+              "desc": "The title of the service.",
+              "required": true
+            },
+            {
+              "name": "serviceDescription",
+              "type": "string",
+              "desc": "The description of the service.",
+              "required": true
+            },
+            {
+              "name": "src",
+              "type": "string",
+              "desc": "The URL of the image to display.",
+              "required": true
+            },
+            {
+              "name": "alt",
+              "type": "string",
+              "desc": "The alt text for the image.",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ProductShowcase",
+      "desc": "A loop of images to showcase products.",
+      "details": "The images keep moving in a loop. Images are displayed horizontally.",
+      "category": "products",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "desc": "The title of the product showcase.",
+          "required": true
+        },
+        {
+          "name": "images",
+          "type": "array",
+          "desc": "An array of images to display.",
+          "required": true,
+          "arrayObjectType": [
+            {
+              "name": "image",
+              "type": "string",
+              "desc": "The URL of the image to display.",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
